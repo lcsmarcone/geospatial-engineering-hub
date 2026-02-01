@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ThemeProvider } from '@/contexts/ThemeContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import WebGISDemos from '@/components/WebGISDemos';
+import Architecture from '@/components/Architecture';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="min-h-screen bg-background text-foreground">
+          <Header />
+          <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Skills />
+            <WebGISDemos />
+            <Architecture />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 };
 
