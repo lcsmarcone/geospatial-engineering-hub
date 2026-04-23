@@ -25,7 +25,7 @@ const Hero = () => {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-2 text-sm">
             <MapPin className="h-4 w-4 text-primary" weight="fill" />
-            <span className="text-muted-foreground">Senior GIS & Full-Stack Developer</span>
+            <span className="text-muted-foreground">Lucas Marcone - GIS & Full-Stack Developer</span>
           </div>
         </motion.div>
 

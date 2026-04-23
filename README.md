@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# Geospatial Engineering Hub
 
-## Project info
+## 🚀 Como rodar o projeto localmente
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+### Pré-requisitos
 
-## How can I edit this code?
+- Node.js instalado (versão 18 ou superior)
+- npm ou yarn instalado
 
-There are several ways of editing your application.
+### Passos para executar
 
-**Use Lovable**
+1. **Instalar as dependências:**
+   ```bash
+   npm install
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+2. **Iniciar o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **Acessar a aplicação:**
+   - O servidor estará rodando em `http://localhost:8080`
+   - A página será recarregada automaticamente quando você fizer alterações no código
 
-**Use your preferred IDE**
+### Outros comandos úteis
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Build para produção:**
+  ```bash
+  npm run build
+  ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Preview do build de produção:**
+  ```bash
+  npm run preview
+  ```
 
-Follow these steps:
+- **Executar testes:**
+  ```bash
+  npm test
+  ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Verificar código (lint):**
+  ```bash
+  npm run lint
+  ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📦 Deploy na Vercel
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Opção 1: Deploy via CLI da Vercel (Recomendado)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1. **Instalar a CLI da Vercel:**
+   ```bash
+   npm i -g vercel
+   ```
 
-**Edit a file directly in GitHub**
+2. **Fazer login na Vercel:**
+   ```bash
+   vercel login
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Fazer o deploy:**
+   ```bash
+   vercel
+   ```
+   
+   Na primeira vez, você será perguntado:
+   - Se deseja vincular a um projeto existente ou criar um novo
+   - O nome do projeto
+   - O diretório de build (use `dist`)
+   
+4. **Deploy em produção:**
+   ```bash
+   vercel --prod
+   ```
 
-**Use GitHub Codespaces**
+### Opção 2: Deploy via GitHub (Integração Contínua)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Fazer push do código para o GitHub:**
+   ```bash
+   git add .
+   git commit -m "Preparar para deploy"
+   git push origin main
+   ```
 
-## What technologies are used for this project?
+2. **Conectar o repositório na Vercel:**
+   - Acesse [vercel.com](https://vercel.com)
+   - Faça login com sua conta GitHub
+   - Clique em "Add New Project"
+   - Selecione o repositório `geospatial-engineering-hub`
+   - A Vercel detectará automaticamente as configurações do `vercel.json`
+   - Clique em "Deploy"
 
-This project is built with:
+3. **Configurações automáticas:**
+   - A Vercel detectará que é um projeto Vite
+   - O build command será: `npm run build`
+   - O output directory será: `dist`
+   - Todas as rotas serão redirecionadas para `index.html` (SPA)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Configuração do projeto
 
-## How can I deploy this project?
+O arquivo `vercel.json` já está configurado com:
+- ✅ Build command: `npm run build`
+- ✅ Output directory: `dist`
+- ✅ Rewrites para SPA (Single Page Application)
+- ✅ Framework: Vite
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Domínio personalizado
 
-## Can I connect a custom domain to my Lovable project?
+Após o deploy, você pode adicionar um domínio personalizado:
 
-Yes, you can!
+1. Acesse o dashboard do projeto na Vercel
+2. Vá em **Settings** > **Domains**
+3. Adicione seu domínio personalizado
+4. Siga as instruções para configurar o DNS
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🛠️ Tecnologias utilizadas
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Vite** - Build tool e dev server
+- **TypeScript** - Tipagem estática
+- **React** - Biblioteca UI
+- **shadcn-ui** - Componentes UI
+- **Tailwind CSS** - Framework CSS
+- **React Router** - Roteamento
+- **Framer Motion** - Animações
+
+## 📝 Notas
+
+- O projeto usa React Router para navegação (SPA)
+- Todas as rotas são redirecionadas para `index.html` no deploy
+- O servidor de desenvolvimento roda na porta 8080

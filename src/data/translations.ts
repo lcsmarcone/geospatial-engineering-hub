@@ -82,6 +82,20 @@ export type TranslationKey =
   | 'demos.mapbox.usecase'
   | 'demos.labels.usecase'
   | 'demos.labels.tech'
+  | 'demos.viewDemo'
+  | 'demos.closeDemo'
+  | 'demos.back'
+  | 'demos.loading'
+  | 'demos.regions'
+  | 'demos.clickCity'
+  | 'demos.chart.show'
+  | 'demos.chart.population'
+  | 'demos.chart.byRegion'
+  | 'demos.chart.regionCompare'
+  | 'demos.stats.libraries'
+  | 'demos.stats.locations'
+  | 'demos.stats.regions'
+  | 'demos.stats.webgl'
   // Architecture
   | 'architecture.title'
   | 'architecture.subtitle'
@@ -137,7 +151,7 @@ export const translations: Translations = {
     'about.p2': 'Today, I combine deep domain expertise in geospatial analysis with modern software development practices. I architect systems that process millions of spatial features, build interactive web mapping applications, and automate complex geoprocessing workflows that previously required days of manual work.',
     'about.p3': 'My focus is on building reliable, performant systems that solve real-world problems. Whether it\'s optimizing a PostGIS query from minutes to milliseconds, designing a scalable tile server architecture, or creating intuitive interfaces for complex spatial operations, I approach every challenge with an engineering mindset.',
     'about.highlight1.title': 'Years of Experience',
-    'about.highlight1.value': '8+',
+    'about.highlight1.value': '6+',
     'about.highlight2.title': 'Projects Delivered',
     'about.highlight2.value': '50+',
     'about.highlight3.title': 'Technologies Mastered',
@@ -202,6 +216,20 @@ export const translations: Translations = {
     'demos.mapbox.usecase': 'Perfect for data visualization, 3D maps, and applications requiring beautiful cartography.',
     'demos.labels.usecase': 'Use Case',
     'demos.labels.tech': 'Technologies',
+    'demos.viewDemo': 'View Demo',
+    'demos.closeDemo': 'Close Demo',
+    'demos.back': 'Back to Demos',
+    'demos.loading': 'Loading map...',
+    'demos.regions': 'Brazilian Regions',
+    'demos.clickCity': 'Click a city for details',
+    'demos.chart.show': 'Chart',
+    'demos.chart.population': 'Population (M)',
+    'demos.chart.byRegion': 'Population by Region (M)',
+    'demos.chart.regionCompare': 'Region comparison',
+    'demos.stats.libraries': 'Libraries',
+    'demos.stats.locations': 'Locations',
+    'demos.stats.regions': 'BR Regions',
+    'demos.stats.webgl': 'WebGL',
     
     // Architecture
     'architecture.title': 'Architecture & Engineering Mindset',
@@ -253,7 +281,7 @@ export const translations: Translations = {
     'about.p2': 'Hoje, combino profundo conhecimento em análise geoespacial com práticas modernas de desenvolvimento de software. Projeto sistemas que processam milhões de feições espaciais, construo aplicações interativas de web mapping e automatizo fluxos complexos de geoprocessamento que antes exigiam dias de trabalho manual.',
     'about.p3': 'Meu foco é construir sistemas confiáveis e performáticos que resolvem problemas reais. Seja otimizando uma consulta PostGIS de minutos para milissegundos, projetando uma arquitetura escalável de servidor de tiles, ou criando interfaces intuitivas para operações espaciais complexas, abordo cada desafio com mentalidade de engenharia.',
     'about.highlight1.title': 'Anos de Experiência',
-    'about.highlight1.value': '8+',
+    'about.highlight1.value': '6+',
     'about.highlight2.title': 'Projetos Entregues',
     'about.highlight2.value': '50+',
     'about.highlight3.title': 'Tecnologias Dominadas',
@@ -318,6 +346,20 @@ export const translations: Translations = {
     'demos.mapbox.usecase': 'Perfeito para visualização de dados, mapas 3D e aplicações que requerem cartografia bonita.',
     'demos.labels.usecase': 'Caso de Uso',
     'demos.labels.tech': 'Tecnologias',
+    'demos.viewDemo': 'Ver Demonstração',
+    'demos.closeDemo': 'Fechar Demonstração',
+    'demos.back': 'Voltar para Demos',
+    'demos.loading': 'Carregando mapa...',
+    'demos.regions': 'Regiões do Brasil',
+    'demos.clickCity': 'Clique em uma cidade',
+    'demos.chart.show': 'Gráfico',
+    'demos.chart.population': 'População (M)',
+    'demos.chart.byRegion': 'População por Região (M)',
+    'demos.chart.regionCompare': 'Comparativo regional',
+    'demos.stats.libraries': 'Bibliotecas',
+    'demos.stats.locations': 'Localizações',
+    'demos.stats.regions': 'Regiões BR',
+    'demos.stats.webgl': 'WebGL',
     
     // Architecture
     'architecture.title': 'Arquitetura & Mentalidade de Engenharia',

@@ -14,20 +14,20 @@ const Contact = () => {
     {
       icon: GithubLogo,
       label: t('contact.github'),
-      href: 'https://github.com',
-      value: 'github.com/geostack',
+      href: 'https://github.com/lcsmarcone',
+      value: 'github.com/lcsmarcone',
     },
     {
       icon: LinkedinLogo,
       label: t('contact.linkedin'),
-      href: 'https://linkedin.com',
-      value: 'linkedin.com/in/geostack',
+      href: 'https://www.linkedin.com/in/lcsmr/',
+      value: 'linkedin.com/in/lcsmr',
     },
     {
       icon: EnvelopeSimple,
       label: t('contact.email'),
-      href: 'mailto:contact@geostack.dev',
-      value: 'contact@geostack.dev',
+      href: 'mailto:lcsmarcone@gmail.com',
+      value: 'lcsmarcone@gmail.com',
     },
   ];
 

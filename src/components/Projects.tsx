@@ -58,7 +58,7 @@ const Projects = () => {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [expandedProject, setExpandedProject] = useState<number | null>(1);
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
   return (
     <section id="projects" className="relative bg-secondary/30 py-24" ref={ref}>
@@ -88,8 +88,8 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className={`skill-card cursor-pointer ${
-                expandedProject === project.id ? 'border-primary/50 shadow-glow' : ''
+              className={`skill-card group cursor-pointer transition-all ${
+                expandedProject === project.id ? 'border-primary/50 shadow-glow' : 'hover:border-primary/30'
               }`}
               onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
             >
@@ -97,8 +97,8 @@ const Projects = () => {
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-xl font-semibold">{t(project.titleKey)}</h3>
                 <ArrowRight 
-                  className={`h-5 w-5 text-primary transition-transform ${
-                    expandedProject === project.id ? 'rotate-90' : ''
+                  className={`h-5 w-5 text-primary transition-all duration-300 ${
+                    expandedProject === project.id ? 'rotate-90' : 'group-hover:translate-x-1'
                   }`} 
                   weight="bold" 
                 />
