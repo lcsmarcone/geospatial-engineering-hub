@@ -17,7 +17,7 @@ const DemoOpenLayersContent = () => {
       <main className="flex-1 flex flex-col">
         <div className="border-b bg-secondary/30">
           <div className="section-container py-4">
-            <Link to="/#demos">
+            <Link to={{ pathname: '/', hash: '#demos' }}>
               <Button variant="ghost" className="gap-2">
                 <ArrowLeft className="h-4 w-4" />
                 {t('demos.back')}
