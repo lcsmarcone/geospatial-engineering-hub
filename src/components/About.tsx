@@ -56,7 +56,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 blur-xl" />
               <img
-                src="/lucas-marcone.jpg"
+                src={`${import.meta.env.BASE_URL}lucas-marcone.jpg`}
                 alt="Lucas Marcone"
                 className="relative h-64 w-64 rounded-2xl object-cover shadow-2xl sm:h-80 sm:w-80"
               />
