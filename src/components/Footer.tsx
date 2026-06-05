@@ -1,5 +1,5 @@
-import { Globe } from '@phosphor-icons/react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import BrandMark from '@/components/BrandMark';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -11,9 +11,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <Globe className="h-5 w-5 text-primary-foreground" weight="bold" />
-            </div>
+            <BrandMark className="h-9 w-9" />
             <span className="text-lg font-semibold tracking-tight">Lucas Marcone</span>
           </div>
 

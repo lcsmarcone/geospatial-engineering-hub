@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sun, Globe, List, X } from '@phosphor-icons/react';
+import { Moon, Sun, List, X } from '@phosphor-icons/react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import BrandMark from '@/components/BrandMark';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -34,9 +35,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <Globe className="h-5 w-5 text-primary-foreground" weight="bold" />
-            </div>
+            <BrandMark className="h-9 w-9" />
             <span className="text-lg font-semibold tracking-tight">Lucas Marcone</span>
           </a>
 
